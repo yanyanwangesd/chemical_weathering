@@ -68,24 +68,6 @@ CIW = Al2O3./(Al2O3+CaO+Na2O)*100; % chemical index of weaterhing, use mol
 PIA = (Al2O3-K2O)./(Al2O3+CaO+Na2O-K2O)*100; % Plagioclase index of alteration, use mol
 WIP = (2*Na2O/0.35 + MgO/0.9 + 2*K2O/0.25 + CaO/0.7)*100; % weathering index of Parker, use mol
 
-% other indices
-alpha_AlCa = (Al2O3./CaO*2)/UCC_alpha_AlCa;
-alpha_AlNa = (Al2O3./Na2O)/UCC_alpha_AlNa;
-alpha_AlMg = (Al2O3./MgO*2)/UCC_alpha_AlMg;
-alpha_AlK =  (Al2O3./K2O)/UCC_alpha_AlK;
-
-alpha_AlSr = (Al2O3./Sr*2)/UCC_alpha_AlSr;
-alpha_AlBa = (Al2O3./Ba*2)/UCC_alpha_AlBa;
-alpha_AlRb = (Al2O3./Rb*2)/UCC_alpha_AlRb;
-alpha_AlCs = (Al2O3./Cs*2)/UCC_alpha_AlCs;
-
-Rb_Sr = Rb*molar_Rb./Sr/molar_Sr; % ppm/ppm
-Sc_Th = Sc*molar_Sc./Th/molar_Th; % ppm/ppm
-
-Na_Si = Na2O./SiO2;
-Fe_Si = Fe2O3./SiO2;
-
-
 %% 5) calculate mean weathering conditions of upper continental crust, for comparing purpose, not necessary
 
 % UCC talbe of values, mass weight ratio, from Rudnick and Gao 2003
@@ -124,6 +106,22 @@ UCC_alpha_AlSr = UCC_Al2O3/UCC_Sr*2;% mol/mol
 UCC_Rb_Sr = 84/320; % ppm/ppm,  ppm=(ug/g)
 UCC_Sc_Th = 14/10.5; % ppm/ppm,  ppm=(ug/g)
 
+%% 6) Other weathering indices
+% other indices
+alpha_AlCa = (Al2O3./CaO*2)/UCC_alpha_AlCa;
+alpha_AlNa = (Al2O3./Na2O)/UCC_alpha_AlNa;
+alpha_AlMg = (Al2O3./MgO*2)/UCC_alpha_AlMg;
+alpha_AlK =  (Al2O3./K2O)/UCC_alpha_AlK;
 
+alpha_AlSr = (Al2O3./Sr*2)/UCC_alpha_AlSr;
+alpha_AlBa = (Al2O3./Ba*2)/UCC_alpha_AlBa;
+alpha_AlRb = (Al2O3./Rb*2)/UCC_alpha_AlRb;
+alpha_AlCs = (Al2O3./Cs*2)/UCC_alpha_AlCs;
+
+Rb_Sr = Rb*molar_Rb./Sr/molar_Sr; % ppm/ppm
+Sc_Th = Sc*molar_Sc./Th/molar_Th; % ppm/ppm
+
+Na_Si = Na2O./SiO2;
+Fe_Si = Fe2O3./SiO2;
 
 
